@@ -78,18 +78,14 @@ public class SudokuSolver {
                     if (playBoard[i][j] != 0 && playBoard[i][j] == playBoard[i][k]) {
                         return true;
                     }
-                }
-            }
-        }
-        for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
-                for (int k = j + 1; k < 9; k++) {
+
                     if (playBoard[j][i] != 0 && playBoard[j][i] == playBoard[k][i]) {
                         return true;
                     }
                 }
             }
         }
+
         for (int i = 0; i < 9; i += 3) {
             for (int j = 0; j < 9; j += 3) {
                 Set<Integer> set = new HashSet<>();
